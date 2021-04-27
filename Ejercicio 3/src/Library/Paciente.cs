@@ -4,11 +4,11 @@ namespace Library
 {
     public class Paciente
     {
-        public string pacientname;
-        public int edad;
-        public int celular;
-        public int id; //Para usar este tenemos que importar el IdUtils
-        Boolean isValid = true;
+        private string pacientname;
+        private int edad;
+        private int celular;
+        private string id; 
+        private Boolean isValid = true;
         public string PacientName
         { 
             get
@@ -67,11 +67,42 @@ namespace Library
                 }
             }
         }
-        public int Id { get ; set; } //Falta usar el IDUtils acá, lo pongo así para poder hacer el commit
+        public string Id 
+        { 
+            get
+            {
+                return this.id;
+            } 
+            set 
+            {
+                if (IdUtils.IdIsValid(value))
+                {
+                    this.id=value;
+                }
+                else 
+                {
+                    Console.WriteLine ("La C.I. que ingresó no es válida");
+                    isValid = false;
+                }
+            }
+        } 
 
-        public Paciente(String pacientname, int edad, int celular, int id)
+
+/*       Creo que hay que eliminar esto
+        public Paciente pacient = new Paciente(string pacientname, int edad, int celular, int id);
         {
-            if (isValid == true)
+            get
+            {
+                if (isValid == true)
+                {
+                return this.pacient;
+                }
+                else
+                {
+                    Console.WriteLine("Error al crear el Paciente");
+                }
+            }
+            set
             {
                 this.PacientName = pacientname;
                 this.Edad = edad;
@@ -79,6 +110,7 @@ namespace Library
                 this.Id = id;
             }
         }
+        */
     }
 }
 
