@@ -4,7 +4,7 @@ namespace Library
 {
     public class Consultorio
     {
-        public string idconsultorio;
+        private string idconsultorio;
         Boolean isValid = true;
         public string IdConsultorio
         { 

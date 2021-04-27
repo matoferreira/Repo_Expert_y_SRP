@@ -5,8 +5,8 @@ namespace Library
     
     public class Doctor
     {
-        public string doctorname;
-        public string especialidad;
+        private string doctorname;
+        private string especialidad;
 
         Boolean isValid = true;
         public string DoctorName
