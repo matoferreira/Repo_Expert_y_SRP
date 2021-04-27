@@ -2,20 +2,24 @@ using System;
 
 namespace Library
 {
+    
     public class Doctor
     {
+        public string doctorname;
+        public string especialidad;
+
         Boolean isValid = true;
         public string DoctorName
         { 
             get
             {
-                return this.DoctorName;
+                return this.doctorname;
             }
             set
             {
                 if (string.IsNullOrEmpty(value) == false)
                 {
-                    this.DoctorName = value;
+                    this.doctorname = value;
                 }
                 else
                 {
@@ -28,13 +32,13 @@ namespace Library
         { 
             get
             {
-                return this.Especialidad;
+                return this.especialidad;
             } 
             set
             {
                 if (string.IsNullOrEmpty(value) == false)
                 {
-                    this.Especialidad = value;
+                    this.especialidad = value;
                 }
                 else
                 {

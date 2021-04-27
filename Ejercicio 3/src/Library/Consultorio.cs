@@ -4,6 +4,7 @@ namespace Library
 {
     public class Consultorio
     {
+        public string idconsultorio;
         Boolean isValid = true;
         public string IdConsultorio
         { 
@@ -15,7 +16,7 @@ namespace Library
             {
                 if (string.IsNullOrEmpty(value) == false)
                 {
-                    this.IdConsultorio = value;
+                    this.idconsultorio = value;
                 }
                 else
                 {
