@@ -5,6 +5,23 @@ namespace Library
 {
     public class AppointmentService
     {
+
+/*
+Lo que vemos que sucede en este programa es que se realizó toda la instrumentación del mismo
+en una sola clase.
+Para comenzar a solucionar esto, lo conveniente sería segmentar el procedimiento en las partes que
+intervienen en la consulta.
+Analizando, podemos observar que existen tres partes que interactuan en la consulta:
+1- El paciente que va a consultar
+2- El médico que lo atiende
+3- El lugar donde se realiza la consulta
+Por ende, para cumplir con el patrón SRP, debería existir una clase por cada una de estas partes.
+Como dichas partes van a ser las expertas en la información, serán quienes tengan la responsabilidad de
+ser los constructores de los objetos y validar los datos.
+Existirá una cuarta parte, que será la clase que se encargue de consolidar esta información, consultando
+a cada clase sobre la información para generar la Consulta resultante. De esta manera, podemos mantener
+nuestras clases encapsuladas.
+*/
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
