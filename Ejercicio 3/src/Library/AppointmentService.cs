@@ -64,6 +64,8 @@ nuestras clases encapsuladas.
                 patient.PacientName = name;
                 patient.Id = id;
                 patient.Celular = phoneNumber;
+                Consultorio consult = new Consultorio(appoinmentPlace);
+                Doctor doctor = new Doctor(doctorName);
                 stringBuilder.Append("Appoinment Scheduled");
             }
 

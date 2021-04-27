@@ -6,9 +6,9 @@ namespace Library
     public class Doctor
     {
         private string doctorname;
-        private string especialidad;
+        private string especialidad = "Desconocida";
 
-        Boolean isValid = true;
+        private Boolean isValid = true;
         public string DoctorName
         { 
             get
@@ -43,17 +43,15 @@ namespace Library
                 else
                 {
                     Console.WriteLine("La especialidad que ingresó no es válida, por favor intente de nuevo");
-                    isValid = false;
                 }
             }
         }
 
-        public Doctor(String doctorname, String especialidad)
+        public Doctor(String doctorname)
         {
             if (isValid == true)
             {
                 this.DoctorName = doctorname;
-                this.Especialidad = especialidad;
             }
             else
             {
