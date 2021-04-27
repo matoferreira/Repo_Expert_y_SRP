@@ -94,7 +94,13 @@ namespace Library
                     isValid = false;
                 }
             }
-        } 
+        }
+        public Paciente(string name, string id, string celular) 
+        {
+            PacientName = name;
+            Id = id;
+            Celular = celular;
+        }
     }
 }
 

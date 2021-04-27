@@ -61,10 +61,7 @@ nuestras clases encapsuladas.
 
             if (isValid == true)
             {
-                Paciente patient = new Paciente();
-                patient.PacientName = name;
-                patient.Id = id;
-                patient.Celular = phoneNumber;
+                Paciente patient = new Paciente(name, id, phoneNumber);
                 Consultorio consult = new Consultorio(appoinmentPlace);
                 Doctor doctor = new Doctor(doctorName);
                 if (patient.IsValid == true && consult.IsValid == true && doctor.IsValid == true)
