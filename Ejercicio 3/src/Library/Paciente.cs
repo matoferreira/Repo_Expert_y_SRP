@@ -67,5 +67,20 @@ namespace Library
                 }
             }
         }
+        public int Id { get ; set; } //Falta usar el IDUtils acá, lo pongo así para poder hacer el commit
+
+        public Paciente(String pacientname, int edad, int celular, int id)
+        {
+            if (isValid == true)
+            {
+                this.PacientName = pacientname;
+                this.Edad = edad;
+                this.Celular = celular;
+                this.Id = id;
+            }
+        }
     }
 }
+
+
+// Falta chequear que funcione la clase y agregar la validación de la cédula de identidad
