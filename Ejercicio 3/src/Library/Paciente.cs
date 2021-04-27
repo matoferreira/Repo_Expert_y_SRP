@@ -5,8 +5,8 @@ namespace Library
     public class Paciente
     {
         private string pacientname;
-        private int edad;
-        private int celular;
+        private int edad = -1;
+        private string celular;
         private string id; 
         private Boolean isValid = true;
         public string PacientName
@@ -36,7 +36,7 @@ namespace Library
             }
             set
             {
-                if ((edad > 0) && (edad < 115))
+                if ((edad >= 0) && (edad < 115))
                 {
                     this.edad = value; //Necesito chequear esto
                 }
@@ -47,7 +47,7 @@ namespace Library
                 }
             }
         }
-        public int Celular
+        public string Celular
         {
             get
             {
@@ -55,10 +55,13 @@ namespace Library
             }
             set
             {
-                int digitos = (int)Math.Floor(Math.Log10(celular) + 1);
-                if (digitos == 9)
+                if (int.TryParse(value, out int digitos))
                 {
-                    this.celular = value; //Necesito chequear esto
+                    digitos = (int)Math.Floor(Math.Log10(digitos) + 1);
+                    if (digitos == 9)
+                    {
+                        this.celular = value; //Necesito chequear esto
+                    }
                 }
                 else
                 {
@@ -86,33 +89,8 @@ namespace Library
                 }
             }
         } 
-
-
-/*       Creo que hay que eliminar esto
-        public Paciente pacient = new Paciente(string pacientname, int edad, int celular, int id);
-        {
-            get
-            {
-                if (isValid == true)
-                {
-                return this.pacient;
-                }
-                else
-                {
-                    Console.WriteLine("Error al crear el Paciente");
-                }
-            }
-            set
-            {
-                this.PacientName = pacientname;
-                this.Edad = edad;
-                this.Celular = celular;
-                this.Id = id;
-            }
-        }
-        */
     }
 }
 
 
-// Falta chequear que funcione la clase y agregar la validación de la cédula de identidad
+// Falta chequear que funcione la clase

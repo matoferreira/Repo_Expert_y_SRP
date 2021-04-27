@@ -58,8 +58,12 @@ nuestras clases encapsuladas.
                 isValid = false;
             }
 
-            if (isValid)
+            if (isValid == true)
             {
+                Paciente patient = new Paciente();
+                patient.PacientName = name;
+                patient.Id = id;
+                patient.Celular = phoneNumber;
                 stringBuilder.Append("Appoinment Scheduled");
             }
 
