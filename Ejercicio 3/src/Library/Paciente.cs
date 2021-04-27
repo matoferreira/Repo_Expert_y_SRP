@@ -9,6 +9,13 @@ namespace Library
         private string celular;
         private string id; 
         private Boolean isValid = true;
+        public bool IsValid 
+        {
+            get
+            {
+                return this.isValid;
+            }
+        }
         public string PacientName
         { 
             get
@@ -43,7 +50,6 @@ namespace Library
                 else
                 {
                     Console.WriteLine("La edad que ingresó no es válida, por favor intente de nuevo");
-                    isValid = false;
                 }
             }
         }

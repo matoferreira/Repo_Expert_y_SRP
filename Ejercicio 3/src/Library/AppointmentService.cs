@@ -24,37 +24,38 @@ nuestras clases encapsuladas.
 */
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
         {
-            StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
+            StringBuilder stringBuilder = new StringBuilder("\n");
+            Console.WriteLine("Comenzando Coordinación...");
             Boolean isValid = true;
 
             if (string.IsNullOrEmpty(name))
             {
-                stringBuilder.Append("Unable to schedule appointment, Name is required\n");
+                stringBuilder.Append("Error: Se requiere nombre de paciente\n");
                 isValid = false;
             }
 
             if (string.IsNullOrEmpty(id))
             {
-                stringBuilder.Append("Unable to schedule appointment, id is required\n");
+                stringBuilder.Append("Error: Se requiere un número de CI\n");
                 isValid = false;
             }
 
             if (string.IsNullOrEmpty(phoneNumber))
             {
-                stringBuilder.Append("Unable to schedule appointment, Phone number is required\n");
+                stringBuilder.Append("Error: Se requiere un celular\n");
                 isValid = false;
             }
 
             if (string.IsNullOrEmpty(appoinmentPlace))
             {
-                stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
+                stringBuilder.Append("Error: Se requiere un consultorio\n");
                 isValid = false;
             }
 
             
             if (string.IsNullOrEmpty(doctorName))
             {
-                stringBuilder.Append("Unable to schedule appointment, Doctor name is required\n");
+                stringBuilder.Append("Error: Se requiere un Doctor\n");
                 isValid = false;
             }
 
@@ -66,7 +67,15 @@ nuestras clases encapsuladas.
                 patient.Celular = phoneNumber;
                 Consultorio consult = new Consultorio(appoinmentPlace);
                 Doctor doctor = new Doctor(doctorName);
-                stringBuilder.Append("Appoinment Scheduled");
+                if (patient.IsValid == true && consult.IsValid == true && doctor.IsValid == true)
+                {
+                    stringBuilder.Append("Consulta coordinada");
+                }
+                else
+                {
+                    stringBuilder.Append("Coordinación fallida");
+                    //Console.WriteLine($"paciente = {patient.IsValid} consulta = {consult.IsValid} doctor = {doctor.IsValid}");
+                }
             }
 
             return stringBuilder.ToString();

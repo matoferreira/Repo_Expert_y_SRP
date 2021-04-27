@@ -6,6 +6,13 @@ namespace Library
     {
         private string idconsultorio;
         private Boolean isValid = true;
+        public bool IsValid 
+        {
+            get
+            {
+                return this.isValid;
+            }
+        }
         public string IdConsultorio
         { 
             get

@@ -9,6 +9,13 @@ namespace Library
         private string especialidad = "Desconocida";
 
         private Boolean isValid = true;
+        public bool IsValid 
+        {
+            get
+            {
+                return this.isValid;
+            }
+        }
         public string DoctorName
         { 
             get
