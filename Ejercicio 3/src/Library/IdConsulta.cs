@@ -10,10 +10,6 @@ namespace Library
         {
             return this.idconsulta;
         }
-        set
-        {
-
-        }
     }
     public int GeneradorNumero()
     {
