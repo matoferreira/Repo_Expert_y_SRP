@@ -80,7 +80,6 @@ nuestras clases encapsuladas.
                 else
                 {
                     stringBuilder.Append("Coordinación fallida");
-                    //Console.WriteLine($"paciente = {patient.IsValid} consulta = {consult.IsValid} doctor = {doctor.IsValid}");
                 }
             }
 
