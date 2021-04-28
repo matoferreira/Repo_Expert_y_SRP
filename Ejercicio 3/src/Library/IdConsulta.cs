@@ -4,13 +4,6 @@ namespace Library
  public class IdConsulta
  {
     static int idconsulta = 0;
-    /*public int Idconsulta
-    {
-        get
-        {
-            return this.idconsulta;
-        }
-    }*/
     public int GeneradorNumero()
     {
       int id = idconsulta + 1;
