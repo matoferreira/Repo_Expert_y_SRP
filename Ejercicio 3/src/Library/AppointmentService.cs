@@ -22,8 +22,14 @@ Existirá una cuarta parte, que será la clase que se encargue de consolidar est
 a cada clase sobre la información para generar la Consulta resultante. De esta manera, podemos mantener
 nuestras clases encapsuladas.
 */
+        public void AgendarConsulta(Paciente paciente, Consultorio consultorio, Doctor doctor)
+        {
+            Console.WriteLine ($"Consulta N°{idconsulta} para el paciente {paciente} en el consultorio {consultorio} con el Dr. {doctor}");
+        }
+
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
         {
+
             StringBuilder stringBuilder = new StringBuilder("\n");
             Console.WriteLine("Comenzando Coordinación...");
             Boolean isValid = true;
@@ -66,6 +72,7 @@ nuestras clases encapsuladas.
                 Doctor doctor = new Doctor(doctorName);
                 if (patient.IsValid == true && consult.IsValid == true && doctor.IsValid == true)
                 {
+                    AgendarConsulta (patient, consult, doctor);
                     stringBuilder.Append("Consulta coordinada");
                 }
                 else

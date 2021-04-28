@@ -3,13 +3,18 @@ namespace Library
 {
  public class IdConsulta
  {
-    private string idconsulta;
-    private int GeneradorNumero()
+    private int idconsulta = 0;
+    public int Idconsulta
     {
-        int min = 0000;
-        int max = 9999;
-        Random num = new Random();
-        return num.Next(min,max);
-    } //Falta sacar la variable para asignarla a idconsulta
+        get
+        {
+            return this.idconsulta;
+        }
+    }
+    public int GeneradorNumero()
+    {
+      idconsulta = idconsulta + 1;
+      return idconsulta;  
+    }
  } 
 }
