@@ -15,6 +15,9 @@ namespace Program
 
             string appointmentResult3 = AppointmentService.CreateAppointment("Ralf Manson", "4.394.424-9", "097456123", DateTime.Now, "Queen Street", "Gonzalez");
             Console.WriteLine(appointmentResult3);
+
+            string appointmentResult4 = AppointmentService.CreateAppointment("Flea", "4.687.500-5", "099333123", DateTime.Now, "Wall Street", "Gonzalez");
+            Console.WriteLine(appointmentResult3);
         }
     }
 }
