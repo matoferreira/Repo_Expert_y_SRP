@@ -10,11 +10,15 @@ namespace Library
         {
             return this.idconsulta;
         }
+        set
+        {
+
+        }
     }
     public int GeneradorNumero()
     {
-      idconsulta = idconsulta + 1;
-      return idconsulta;  
+      int id = Idconsulta + 1;
+      return id;  
     }
  } 
 }
