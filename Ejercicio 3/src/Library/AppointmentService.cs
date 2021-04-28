@@ -22,11 +22,11 @@ Existirá una cuarta parte, que será la clase que se encargue de consolidar est
 a cada clase sobre la información para generar la Consulta resultante. De esta manera, podemos mantener
 nuestras clases encapsuladas.
 */
+        
         public static void AgendarConsulta(Paciente paciente, Consultorio consultorio, Doctor doctor)
         {
             IdConsulta nro = new IdConsulta();
-            int nro2 = nro.GeneradorNumero();
-            Console.WriteLine ($"Consulta N°{nro2} para el paciente {paciente.PacientName} en el consultorio {consultorio.IdConsultorio} con el Dr. {doctor.DoctorName}");
+            Console.WriteLine ($"Consulta N°{nro.GeneradorNumero()} para el paciente {paciente.PacientName} en el consultorio {consultorio.IdConsultorio} con el Dr. {doctor.DoctorName}");
         }
 
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
