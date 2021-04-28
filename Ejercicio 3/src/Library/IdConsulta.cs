@@ -18,6 +18,7 @@ namespace Library
     public int GeneradorNumero()
     {
       int id = Idconsulta + 1;
+      idconsulta = id;
       return id;  
     }
  } 

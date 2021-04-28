@@ -26,7 +26,7 @@ nuestras clases encapsuladas.
         {
             IdConsulta nro = new IdConsulta();
             int nro2 = nro.GeneradorNumero();
-            Console.WriteLine ($"Consulta N°{nro2} para el paciente {paciente} en el consultorio {consultorio} con el Dr. {doctor}");
+            Console.WriteLine ($"Consulta N°{nro2} para el paciente {paciente.PacientName} en el consultorio {consultorio.IdConsultorio} con el Dr. {doctor.DoctorName}");
         }
 
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)

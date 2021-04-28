@@ -17,7 +17,7 @@ namespace Library
         { 
             get
             {
-                return this.IdConsultorio;
+                return this.idconsultorio;
             }
             set
             {
